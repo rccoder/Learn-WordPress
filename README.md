@@ -37,11 +37,13 @@ WordPress无论在国外还是国内一直是一个比较火的博客软件，�
 
 修改之后，登录你的GitHub, 然后进行```pull request```
 
+**或者你可以查看这篇文章：[同步一个 fork](http://gaohaoyang.github.io/2015/04/12/Syncing-a-fork/)**
+
 贡献内容
 ===
  * 错别字/措辞/图文修饰 - 直接发送pull request
  * 相关建议直接进行review或者在issues提交问题
  
- 作者
+作者
 ===
 ……
