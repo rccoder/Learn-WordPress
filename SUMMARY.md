@@ -27,6 +27,7 @@
          + [常用函数介绍](./chapter2/2/simple-function.md) 
          + [几大循环函数的使用](./chapter2/2/while-function.md)
          + [add_action与add_filter的使用](./chapter2/2/action-filter.md)
+         + [Post Formats的使用](./chapter2/2/post-format.md)
          + [Custom Post Type的使用](./chapter2/2/post-type.md)
      - [插件篇](./chapter2/3/README.md)
          + [从0开始第一个WordPress插件](./chapter2/3/start.md)
