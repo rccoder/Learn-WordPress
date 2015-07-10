@@ -22,6 +22,7 @@
         + [PHP准备](./chapter2/1/php.md)
         + [JS/JQ准备](./chapter2/1/js.md)
      - [主题篇](./chapter2/2/README.md)
+         + [WordPress模板层次介绍](./chapter2/2/templeintro.md)
          + [从0开始第一个WordPress主题](./chapter2/2/start.md)
          + [常用函数介绍](./chapter2/2/simple-function.md) 
          + [几大循环函数的使用](./chapter2/2/while-function.md)
