@@ -1,3 +1,45 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [WordPress 条件判断标签及用法大全](#wordpress-%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E6%A0%87%E7%AD%BE%E5%8F%8A%E7%94%A8%E6%B3%95%E5%A4%A7%E5%85%A8)
+  - [所有的条件判断标签](#%E6%89%80%E6%9C%89%E7%9A%84%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E6%A0%87%E7%AD%BE)
+    - [主页面（Main）](#%E4%B8%BB%E9%A1%B5%E9%9D%A2%EF%BC%88main%EF%BC%89)
+    - [首页（Front）](#%E9%A6%96%E9%A1%B5%EF%BC%88front%EF%BC%89)
+    - [后台控制面板（Administration Panels）](#%E5%90%8E%E5%8F%B0%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%EF%BC%88administration-panels%EF%BC%89)
+    - [文章页面（Single Post）](#%E6%96%87%E7%AB%A0%E9%A1%B5%E9%9D%A2%EF%BC%88single-post%EF%BC%89)
+    - [置顶文章（Sticky Post）](#%E7%BD%AE%E9%A1%B6%E6%96%87%E7%AB%A0%EF%BC%88sticky-post%EF%BC%89)
+    - [文章类型（Post Type）](#%E6%96%87%E7%AB%A0%E7%B1%BB%E5%9E%8B%EF%BC%88post-type%EF%BC%89)
+    - [评论相关（Comments）](#%E8%AF%84%E8%AE%BA%E7%9B%B8%E5%85%B3%EF%BC%88comments%EF%BC%89)
+    - [判断页面（Page）](#%E5%88%A4%E6%96%AD%E9%A1%B5%E9%9D%A2%EF%BC%88page%EF%BC%89)
+    - [判断子页面（sub-Pages）](#%E5%88%A4%E6%96%AD%E5%AD%90%E9%A1%B5%E9%9D%A2%EF%BC%88sub-pages%EF%BC%89)
+    - [判断页面模版（Page Template）](#%E5%88%A4%E6%96%AD%E9%A1%B5%E9%9D%A2%E6%A8%A1%E7%89%88%EF%BC%88page-template%EF%BC%89)
+    - [判断分类页面（Category）](#%E5%88%A4%E6%96%AD%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%EF%BC%88category%EF%BC%89)
+    - [判断标签页面（Tag）](#%E5%88%A4%E6%96%AD%E6%A0%87%E7%AD%BE%E9%A1%B5%E9%9D%A2%EF%BC%88tag%EF%BC%89)
+    - [判断自定义分类页面（Taxonomy）](#%E5%88%A4%E6%96%AD%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%EF%BC%88taxonomy%EF%BC%89)
+    - [判断作者页面（Author）](#%E5%88%A4%E6%96%AD%E4%BD%9C%E8%80%85%E9%A1%B5%E9%9D%A2%EF%BC%88author%EF%BC%89)
+    - [判断是否为日期存档页面（Date Page）](#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E4%B8%BA%E6%97%A5%E6%9C%9F%E5%AD%98%E6%A1%A3%E9%A1%B5%E9%9D%A2%EF%BC%88date-page%EF%BC%89)
+    - [判断任意存档页面（Any Archive Page）](#%E5%88%A4%E6%96%AD%E4%BB%BB%E6%84%8F%E5%AD%98%E6%A1%A3%E9%A1%B5%E9%9D%A2%EF%BC%88any-archive-page%EF%BC%89)
+    - [判断搜索结果页面（Search Result Page）](#%E5%88%A4%E6%96%AD%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E9%A1%B5%E9%9D%A2%EF%BC%88search-result-page%EF%BC%89)
+    - [判断是否为 404 页面（404 Not Found Page）](#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E4%B8%BA-404-%E9%A1%B5%E9%9D%A2%EF%BC%88404-not-found-page%EF%BC%89)
+    - [判断被分页页面（Paged Page）](#%E5%88%A4%E6%96%AD%E8%A2%AB%E5%88%86%E9%A1%B5%E9%A1%B5%E9%9D%A2%EF%BC%88paged-page%EF%BC%89)
+    - [判断是否为附件页面（Attachment）](#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E4%B8%BA%E9%99%84%E4%BB%B6%E9%A1%B5%E9%9D%A2%EF%BC%88attachment%EF%BC%89)
+    - [判断单页面、文章页面或者附件页面](#%E5%88%A4%E6%96%AD%E5%8D%95%E9%A1%B5%E9%9D%A2%E3%80%81%E6%96%87%E7%AB%A0%E9%A1%B5%E9%9D%A2%E6%88%96%E8%80%85%E9%99%84%E4%BB%B6%E9%A1%B5%E9%9D%A2)
+    - [判断订阅页面](#%E5%88%A4%E6%96%AD%E8%AE%A2%E9%98%85%E9%A1%B5%E9%9D%A2)
+    - [判断引用通告（Trackback）](#%E5%88%A4%E6%96%AD%E5%BC%95%E7%94%A8%E9%80%9A%E5%91%8A%EF%BC%88trackback%EF%BC%89)
+    - [判断预览页面](#%E5%88%A4%E6%96%AD%E9%A2%84%E8%A7%88%E9%A1%B5%E9%9D%A2)
+    - [判断是否有摘要](#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%9C%89%E6%91%98%E8%A6%81)
+    - [判断是否在主循环中](#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E5%9C%A8%E4%B8%BB%E5%BE%AA%E7%8E%AF%E4%B8%AD)
+    - [判断边栏是否已经激活可用](#%E5%88%A4%E6%96%AD%E8%BE%B9%E6%A0%8F%E6%98%AF%E5%90%A6%E5%B7%B2%E7%BB%8F%E6%BF%80%E6%B4%BB%E5%8F%AF%E7%94%A8)
+    - [判断是否是网站的一部分（对于多站点网站）](#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%98%AF%E7%BD%91%E7%AB%99%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%88%E5%AF%B9%E4%BA%8E%E5%A4%9A%E7%AB%99%E7%82%B9%E7%BD%91%E7%AB%99%EF%BC%89)
+    - [判断是否是主站点（对于多站点网站）](#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%98%AF%E4%B8%BB%E7%AB%99%E7%82%B9%EF%BC%88%E5%AF%B9%E4%BA%8E%E5%A4%9A%E7%AB%99%E7%82%B9%E7%BD%91%E7%AB%99%EF%BC%89)
+    - [判断网站的 Admin （对于多站点网站）](#%E5%88%A4%E6%96%AD%E7%BD%91%E7%AB%99%E7%9A%84-admin-%EF%BC%88%E5%AF%B9%E4%BA%8E%E5%A4%9A%E7%AB%99%E7%82%B9%E7%BD%91%E7%AB%99%EF%BC%89)
+    - [判断插件是否激活](#%E5%88%A4%E6%96%AD%E6%8F%92%E4%BB%B6%E6%98%AF%E5%90%A6%E6%BF%80%E6%B4%BB)
+    - [判断子主题](#%E5%88%A4%E6%96%AD%E5%AD%90%E4%B8%BB%E9%A2%98)
+    - [判断当前主题功能](#%E5%88%A4%E6%96%AD%E5%BD%93%E5%89%8D%E4%B8%BB%E9%A2%98%E5%8A%9F%E8%83%BD)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 WordPress 条件判断标签及用法大全
 ===
 
