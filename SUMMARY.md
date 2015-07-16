@@ -26,6 +26,7 @@
          + [从0开始第一个WordPress主题](./chapter2/2/start.md)
          + [常用函数介绍](./chapter2/2/simple-function.md) 
          + [几大循环函数的使用](./chapter2/2/while-function.md)
+         + [WordPress条件判断标签及其相关用法](./chapter2/2/judge.md)
          + [add_action与add_filter的使用](./chapter2/2/action-filter.md)
          + [Post Formats的使用](./chapter2/2/post-format.md)
          + [Custom Post Type的使用](./chapter2/2/post-type.md)
