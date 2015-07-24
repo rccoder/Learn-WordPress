@@ -1,0 +1,7 @@
+## Ignore some temp files and backup files
+*.log
+*.bak
+*.tmp
+
+## For Ubuntu user
+*~
