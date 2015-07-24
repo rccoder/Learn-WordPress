@@ -14,6 +14,7 @@
     + [评论发送邮件的几点注意事项](./chapter1/mail.md)
     + [数据的备份](./chapter1/copy.md)
     + [常用插件推荐](./chapter1/plugin-intro.md)
+    + [开启多站点和多站点的管理](./chapter1/multisite.md)
     
 * [开发篇](./chapter2/README.md)
      - [基础预备篇](./chapter2/1/README.md)
